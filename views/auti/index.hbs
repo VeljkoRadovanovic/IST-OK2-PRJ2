@@ -1,0 +1,27 @@
+<table>
+    <thead>
+        <tr>
+            <th>MARKA</th>
+            <th>MODEL</th>
+            <th>GODINA</th>
+            <th><a href="/auti/add">+ Add</a></th>
+        </tr>
+    </thead>
+    <tbody>
+         {{#each auti}}
+        <tr>
+            <td>{{this.marka}}</td>
+            <td>{{this.model}}</td>
+            <td>{{this.godina}}</td>
+         <td>
+            <form action="/auti/delete/{{this._id}}" method="POST">
+            <a href="/auti/add/{{this._id}}">Edit</a>
+            <button type="submit">
+                DEL
+            </button>
+            </form>
+        </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

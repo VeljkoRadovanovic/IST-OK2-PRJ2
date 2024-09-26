@@ -1,0 +1,11 @@
+<form action="/auti/add" method="POST">
+    <input type="hidden" name="_id" value="{{auti._id}}">
+    <label>Marka</label></br>
+    <input name="marka" required value="{{auti.marka}}"> </br>
+    <label>Model</label></br>
+    <input name="model" required value="{{auti.model}}"></br>
+    <label>Godiste</label></br>
+    <input name="godina" required type="number" value="{{auti.godina}}"></br>
+    <a href="/auti">Prikazi Listu</a>
+    <button type="submit">Dodaj</button>
+</form>
